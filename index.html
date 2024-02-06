@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/2f3af31acb.js" crossorigin="anonymous"></script>
+      <!-- Font usage from boxicon-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Home</title>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Your content goes here -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">LMDev</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </div>
+        
+    </header>
+
+    <!--Home section design-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi there, I am</h3>
+            <h1>Letlhogonolo Marametsi</h1>
+            <h3>And I'm a <span>Frontend Developer</span></h3>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/share/oFSq8tdRMVNk4jB1/?mibextid=hu50Ix"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/letlhogonolo_marametsi?igsh=OGJhZzB0OG5ibno2&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/letlhogonolo-marametsi-b09258275?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BPajGL%2FMwQFaOu0gynjnhCQ%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+        
+        <div class="home-img">
+            <img src="images/lmdev-removebg-preview.png" alt="">
+        </div>
+
+        <div class="flex-container">
+            <div class="flex-box">
+                <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="flex-box">
+                <i class='bx bxl-django'></i>
+            </div>
+            <div class="flex-box">
+                <i class="fa-solid fa-database"></i>
+            </div>
+            <div class="flex-box">
+                <i class='bx bxl-html5' ></i>
+            </div>
+            <div class="flex-box">
+                <i class="fa-brands fa-square-github"></i>
+            </div>
+
+</div>
+
+<a href="images/LetlhogonoloMarametsiResume (6).pdf" download class="btn">Download CV</a>
+    </section>
+    
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Cpopyright &copy; 2024 by LMDev | All Rights Reserved .</p>
+        </div>
+    </footer>
+
+    <!-- Additional HTML elements and content -->
+
+    <!-- Your scripts can be placed at the end of the body for better performance -->
+    <!-- Example: <script src="your-script.js"></script> -->
+    <!-- Script for Navbar-->
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggle_btnIcon = document.querySelector('.toggle_btn i')
+        const dropdown_menu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropdown_menu.classList.toggle('open')
+            const isopen = dropdown_menu.classList.contains('open')
+
+            toggle_btnIcon.classList = isopen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <!--Script for special functions-->
+    <script src="JS/script.js"></script>
+
+    <!--Script for page font functions-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</body>
+
+</html>

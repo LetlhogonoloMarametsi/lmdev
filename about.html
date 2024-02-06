@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/2f3af31acb.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Your content goes here -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">LMDev</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </div>
+    </header>
+
+    <!-- Additional HTML elements and content -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/myself-removebg-preview.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About <span>Me</span></h1>
+                    <p>I am a 2023 HyperionDev Software Engineering graduate. I possess strong analytical and
+                        problem solving skills with the ability to quickly learn<br> and adapt to new technologies
+                        with
+                        Python
+                        development. Furthermore, I'm seeking for an opportunity to work as a Python Software<br>
+                        Developer and utilize my technical skills to contribute to the success of the
+                        organization.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <!-- Skill Contents -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Full Stack Software Developer</span><br>For Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app development</li>
+                            <li><span>App Development</span><br>Building python based apps</li>
+                        </ul>
+                    </div>
+                    <!-- Experience Contents -->
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - 2022</span><br>Health and Saftey Screening Officers</li>
+                            <li><span>2019 - 2019 </span><br>Staff Bus Driver</li>
+                        </ul>
+                    </div>
+                    <!-- Education Contents -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>HyperionDev Software Engineering Bootcamp</li>
+                            <li><span>2020</span><br>Impact Emergency Technology College</li>
+                        </ul>
+                    </div>
+                    <!-- My services section -->
+                    <section class="services" id="services">
+                        <h2 class="heading">My <span>services</span></h2>
+
+                        <div class="services-container">
+                            <div class="services-box">
+                                <i class="fa-solid fa-code"></i>
+                                <h3>Web Design</h3>
+                                <p>I specialize in crafting visually appealling and user-frindly websites tailoredto
+                                    meet
+                                    your unique business needs. From sleek and
+                                    modern desings to robust e-commerce platforms, my services encompass the full
+                                    spectrum
+                                    of weeb design.</p>
+                            </div>
+                            <div class="services-container">
+                                <div class="services-box">
+                                    <i class="fa-brands fa-python"></i>
+                                    <h2>Software Development</h2>
+                                    <p>Unlock the potential of your business with my comprehensive app development services
+                                        using Python coding. I create custom applications
+                                        that seamlessly blend innovation and functionality.</p>
+                                </div>
+
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- footer section -->
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Cpopyright &copy; 2024 by LMDev | All Rights Reserved .</p>
+            </div>
+        </footer>
+
+    <!-- Your scripts can be placed at the end of the body for better performance -->
+    <!-- Example: <script src="your-script.js"></script> -->
+    <!-- Script for Navbar-->
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggle_btnIcon = document.querySelector('.toggle_btn i')
+        const dropdown_menu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropdown_menu.classList.toggle('open')
+            const isopen = dropdown_menu.classList.contains('open')
+
+            toggle_btnIcon.classList = isopen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <!-- Scipt for Tab-links and contents-->
+    <!-- Declared function opentab-->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+        <!--Script for special functions-->
+        <script src="JS/script.js"></script>
+</body>
+
+</html>
